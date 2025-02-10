@@ -1,0 +1,39 @@
+[
+    {
+        "id": 1,
+        "image": "https://i.postimg.cc/j5c9rVh7/temp-Image4-TW0-AX.avif",
+        "title": "Deluxe Room",
+        "description": "Spacious and luxurious room with a stunning view.",
+        "price": "$200/night",
+        "amenities": [
+            "Free Wi-Fi",
+            "Air Conditioning",
+            "Breakfast Included"
+        ]
+    },
+    {
+        "id": 2,
+        "image": "https://i.postimg.cc/yNq2mydk/temp-Image8a-WIay.avif",
+        "title": "Executive Suite",
+        "description": "Elegant suite with modern amenities and a private balcony.",
+        "price": "$300/night",
+        "amenities": [
+            "Free Wi-Fi",
+            "Air Conditioning",
+            "Mini Bar"
+        ]
+    },
+    {
+        "id": 3,
+        "image": "https://i.postimg.cc/4NSDdgRv/temp-Imagezl2i-Dh.avif",
+        "title": "Presidential Suite",
+        "description": "Ultimate luxury with a jacuzzi and panoramic city views.",
+        "price": "$500/night",
+        "amenities": [
+            "Free Wi-Fi",
+            "Air Conditioning",
+            "Jacuzzi",
+            "Private Pool"
+        ]
+    }
+]
