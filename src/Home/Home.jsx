@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import featuredRooms from '../assets/Data/featuredRooms.json'
 import offer from '../assets/Data/offer.json'
+import guest from '../assets/Featured/image.png'
 
 
 const Home = () => {
@@ -28,7 +29,7 @@ const Home = () => {
                     transition={{ duration: 1 }}
                     className="relative text-center text-white"
                 >
-                    <h1 className="text-5xl font-bold mb-4">Welcome to Hotel Luxe</h1>
+                    <h1 className="text-5xl font-bold mb-4">Welcome to Hotel Eva</h1>
                     <p className="text-xl mb-8">
                         Experience luxury and comfort like never before.
                     </p>
@@ -37,7 +38,7 @@ const Home = () => {
                         whileTap={{ scale: 0.9 }}
                         className="bg-blue-500 text-white px-8 py-3 rounded-lg text-lg font-semibold"
                     >
-                        Book Now
+                        <Link to={'/rooms'}>Book Now</Link>
                     </motion.button>
                 </motion.div>
             </div>
@@ -76,36 +77,36 @@ const Home = () => {
             <div className="bg-blue-50 py-16 px-4">
                 <h2 className="text-3xl font-bold text-center mb-8">Special Offers</h2>
                 <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {[1, 2].map((offer) => (
-                        <motion.div
-                            key={offer}
-                            initial={{ opacity: 0, x: offer % 2 === 0 ? 50 : -50 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.5, delay: offer * 0.2 }}
-                            className="bg-white rounded-lg shadow-lg overflow-hidden"
-                        >
-                            <img
-                                src={`https://source.unsplash.com/random/600x400?offer=${offer}`}
-                                alt={`Offer ${offer}`}
-                                className="w-full h-48 object-cover"
-                            />
-                            <div className="p-6">
-                                <h3 className="text-xl font-bold mb-2">Special Offer {offer}</h3>
-                                <p className="text-gray-600 mb-4">
-                                    Enjoy exclusive discounts and packages.
-                                </p>
-                                <button className="bg-blue-500 text-white px-6 py-2 rounded-lg">
-                                    Learn More
-                                </button>
-                            </div>
-                        </motion.div>
+                    {offer.map((offer) => (
+                        <Link to={`/room/${offer.id}`} key={offer.id}>
+                            <motion.div
+                                key={offer}
+                                initial={{ opacity: 0, x: offer % 2 === 0 ? 50 : -50 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.5, delay: offer * 0.2 }}
+                                className="bg-white rounded-lg shadow-lg overflow-hidden"
+                            >
+                                <img
+                                    src={offer.image}
+                                    alt={offer.title}
+                                    className="w-full h-64 object-cover"
+                                />
+                                <div className="p-6">
+                                    <h3 className="text-xl font-bold mb-2">{offer.title}</h3>
+                                    <p className="text-gray-600 mb-4">{offer.description}</p>
+                                    <p className="text-2xl font-bold text-blue-500">
+                                        {offer.price}
+                                    </p>
+                                </div>
+                            </motion.div>
+                        </Link>
                     ))}
                 </div>
             </div>
 
             {/* Testimonials (unchanged) */}
             <div className="py-16 px-4">
-                <h2 className="text-3xl font-bold text-center mb-8">What Our Guests Say</h2>
+                <h2 className="text-3xl font-bold text-center mb-8">What Our Guests Says</h2>
                 <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
                     {[1, 2, 3].map((testimonial) => (
                         <motion.div
@@ -121,7 +122,7 @@ const Home = () => {
                             </p>
                             <div className="flex items-center">
                                 <img
-                                    src={`https://source.unsplash.com/random/100x100?person=${testimonial}`}
+                                    src={guest}
                                     alt={`Guest ${testimonial}`}
                                     className="w-12 h-12 rounded-full mr-4"
                                 />
@@ -135,12 +136,8 @@ const Home = () => {
                 </div>
             </div>
 
-            {/* Footer (unchanged) */}
-            <footer className="bg-gray-800 text-white py-8">
-                <div className="max-w-6xl mx-auto px-4 text-center">
-                    <p>&copy; 2023 Hotel Luxe. All rights reserved.</p>
-                </div>
-            </footer>
+
+
         </div>
     );
 };

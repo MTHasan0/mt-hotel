@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +22,7 @@ const Navbar = () => {
                     <div className="flex justify-between items-center py-4">
                         {/* Logo */}
                         <div className="text-2xl font-bold text-gray-800">
-                            Hotel Luxe
+                            Hotel Eva
                         </div>
 
                         {/* Mobile Menu Button */}
@@ -57,21 +58,21 @@ const Navbar = () => {
 
                         {/* Desktop Menu */}
                         <div className="hidden md:flex space-x-8">
-                            <a href="/" className="text-gray-800 hover:text-blue-500">
+                            <Link to={'/'} className="text-gray-800 hover:text-blue-500">
                                 Home
-                            </a>
-                            <a href="/rooms" className="text-gray-800 hover:text-blue-500">
+                            </Link>
+                            <Link to={'/rooms'} className="text-gray-800 hover:text-blue-500">
                                 Rooms
-                            </a>
-                            <a href="/booking" className="text-gray-800 hover:text-blue-500">
+                            </Link>
+                            <Link to={'/rooms'} className="text-gray-800 hover:text-blue-500">
                                 Booking
-                            </a>
-                            <a href="/gallery" className="text-gray-800 hover:text-blue-500">
+                            </Link>
+                            <Link to={'/gallery'} className="text-gray-800 hover:text-blue-500">
                                 Gallery
-                            </a>
-                            <a href="/contact" className="text-gray-800 hover:text-blue-500">
+                            </Link>
+                            <Link to={'/contact'} className="text-gray-800 hover:text-blue-500">
                                 Contact
-                            </a>
+                            </Link>
                         </div>
                     </div>
 
@@ -84,12 +85,12 @@ const Navbar = () => {
                             <a href="/rooms" className="block py-2 text-gray-800 hover:text-blue-500">
                                 Rooms
                             </a>
-                            <a href="/booking" className="block py-2 text-gray-800 hover:text-blue-500">
+                            <Link to={'/rooms'} className="block py-2 text-gray-800 hover:text-blue-500">
                                 Booking
-                            </a>
-                            <a href="/gallery" className="block py-2 text-gray-800 hover:text-blue-500">
+                            </Link>
+                            <Link to={'/gallery'} className="block py-2 text-gray-800 hover:text-blue-500">
                                 Gallery
-                            </a>
+                            </Link>
                             <a href="/contact" className="block py-2 text-gray-800 hover:text-blue-500">
                                 Contact
                             </a>

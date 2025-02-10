@@ -10,6 +10,10 @@ import {
 import Home from './Home/Home.jsx';
 import RoomDetails from './Pages/Room/RoomDetails.jsx';
 import BookNow from './Pages/Booking/BookNow.jsx';
+import Room from './Pages/Room/Rooms.jsx';
+import Rooms from './Pages/Room/Rooms.jsx';
+import Gallery from './Pages/Gallery/Gallery.jsx';
+import Contact from './Pages/Contact/Contact.jsx';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +31,18 @@ const router = createBrowserRouter([
       {
         path: "/booking/:id",
         element: <BookNow></BookNow>
+      },
+      {
+        path: "/rooms",
+        element: <Rooms></Rooms>
+      },
+      {
+        path: "/gallery",
+        element: <Gallery></Gallery>
+      },
+      {
+        path: "/contact",
+        element: <Contact></Contact>
       },
     ]
   },
