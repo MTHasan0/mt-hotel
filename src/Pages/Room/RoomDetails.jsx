@@ -20,7 +20,7 @@ const RoomDetails = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
 
-            className="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transition-shadow h-screen"
+            className="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transition-shadow lg:h-screen  xl:mb-0"
         >
             <div className="py-16 px-4">
                 <div className="max-w-6xl mx-auto">
@@ -42,7 +42,7 @@ const RoomDetails = () => {
                                     </li>
                                 ))}
                             </ul>
-                            <Link to={`/booking/${room.id}`} className="bg-blue-500 text-white px-6 py-2 rounded-lg ">
+                            <Link to={`/booking/${room.id}`} className="bg-blue-500 text-white px-6 py-2 rounded-lg mb-44">
                                 Book Now
                             </Link>
                         </div>

@@ -24,12 +24,22 @@ const Home = () => {
                 <div className="absolute inset-0 bg-black opacity-50"></div>
                 {/* Content */}
                 <motion.div
-                    initial={{ opacity: 0, y: 50 }}
+                    initial={{ opacity: 0, y: 60 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
                     className="relative text-center text-white"
                 >
-                    <h1 className="text-5xl font-bold mb-4">Welcome to Hotel Eva</h1>
+                    <div className=" flex mb-4">
+                        <h1 className="text-5xl font-bold ">Welcome to Hotel</h1>
+                        <motion.div
+                            initial={{ opacity: 0, y: -80 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1, delay: 0.2 }}
+                            className="  overflow-hidden transition-shadow ml-0.5 "
+                        >
+                            <span className=" text-5xl font-bold p-3 bg-slate-500 ">Hasan</span>
+                        </motion.div>
+                    </div>
                     <p className="text-xl mb-8">
                         Experience luxury and comfort like never before.
                     </p>
@@ -45,14 +55,23 @@ const Home = () => {
 
             {/* Featured Rooms */}
             <div className="py-16 px-4">
-                <h2 className="text-3xl font-bold text-center mb-8">Featured Rooms</h2>
+                <motion.div
+                    initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    className="  overflow-hidden transition-shadow"
+                >
+                    <h2 className="text-3xl font-bold  text-center ">Featured Rooms</h2>
+                </motion.div>
+                <div className=" h-0.5 border-b-2 border-slate-400 w-[60%] mx-auto mb-8 mt-6"></div>
+
                 <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
                     {featuredRooms.map((room) => (
                         <Link to={`/room/${room.id}`} key={room.id}>
                             <motion.div
                                 initial={{ opacity: 0, y: 50 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: room.id * 0.2 }}
+                                transition={{ duration: 0.8, delay: 0.5 }}
                                 className="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transition-shadow"
                             >
                                 <img
@@ -75,15 +94,25 @@ const Home = () => {
 
             {/* Special Offers (unchanged) */}
             <div className="bg-blue-50 py-16 px-4">
-                <h2 className="text-3xl font-bold text-center mb-8">Special Offers</h2>
+                <motion.div
+                    initial={{ opacity: 0, y: -80 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.3 }}
+                    className="  overflow-hidden transition-shadow"
+                >
+                    <h2 className="text-4xl font-bold text-center mb-2">Special Offers</h2>
+                </motion.div>
+                <div className=" h-0.5 border-b-2 border-slate-400 w-[60%] mx-auto mb-8 mt-6"></div>
+
+
                 <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
                     {offer.map((offer) => (
                         <Link to={`/room/${offer.id}`} key={offer.id}>
                             <motion.div
                                 key={offer}
-                                initial={{ opacity: 0, x: offer % 2 === 0 ? 50 : -50 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 0.5, delay: offer * 0.2 }}
+                                initial={{ opacity: 0, y: 60 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8, delay: 0.2 }}
                                 className="bg-white rounded-lg shadow-lg overflow-hidden"
                             >
                                 <img

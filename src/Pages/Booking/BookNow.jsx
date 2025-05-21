@@ -33,7 +33,7 @@ const BookNow = () => {
                 >
                     <h1 className="text-5xl font-bold mb-4">Book Your Stay</h1>
                     <p className="text-xl">
-                        Experience luxury and comfort at Hotel Luxe.
+                        Experience luxury and comfort at Hotel Hasan.
                     </p>
                 </motion.div>
             </div>
