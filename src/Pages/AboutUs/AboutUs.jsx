@@ -2,6 +2,9 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import lobby from '../../assets/Image/lobby.jpg'
 import teamPhoto from '../../assets/Image/Team.jpeg'
+import GoogleMapReact from 'google-map-react';
+import mapPhoto from '../../assets/Image/map.png'
+import { Link } from 'react-router-dom';
 
 
 
@@ -23,10 +26,15 @@ const AboutUs = () => {
             { id: 3, name: "Elena Rodriguez", role: "Guest Relations" },
             { id: 4, name: "David Wilson", role: "Head Concierge" }
         ],
-        location: {
-            address: "123 Luxury Avenue, Metropolitan City",
-            coords: { lat: 40.7128, lng: -74.0060 }
-        }
+
+    };
+    const AnyReactComponent = ({ text }) => <div>{text}</div>;
+    const defaultProps = {
+        center: {
+            lat: 50,
+            lng: 50
+        },
+        zoom: 11
     };
 
     // Animation variants
@@ -93,10 +101,10 @@ const AboutUs = () => {
                         animate="visible"
                     >
                         <motion.h1
-                            className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
+                            className="text-5xl md:text-7xl font-bold text-white mb-6  leading-tight"
                             variants={item}
                         >
-                            Our <span className="text-amber-400">Story</span> of Hospitality
+                            Our <span className="">Story</span> of Hospitality
                         </motion.h1>
 
                         <motion.p
@@ -107,9 +115,9 @@ const AboutUs = () => {
                         </motion.p>
 
                         <motion.div variants={item}>
-                            <button className="px-8 py-3 bg-amber-500 hover:bg-amber-600 text-white font-medium rounded-full transition-all shadow-lg hover:shadow-xl">
+                            <Link to={'/rooms'} className="px-8 py-3 bg-blue-500 hover:bg-blue-600 cursor-pointer text-white font-medium rounded-full transition-all shadow-lg hover:shadow-xl">
                                 Explore Our Rooms
-                            </button>
+                            </Link>
                         </motion.div>
                     </motion.div>
                 </div>
@@ -141,7 +149,7 @@ const AboutUs = () => {
                 >
                     <motion.div variants={item}>
                         <h2 className="text-4xl font-bold mb-6 text-gray-800">
-                            The <span className="text-amber-500">MT Hotel</span> Experience
+                            The <span className="text-blue-500">MT Hotel</span> Experience
                         </h2>
 
                         <p className="text-lg text-gray-600 mb-6">
@@ -160,7 +168,7 @@ const AboutUs = () => {
                                     whileHover={{ y: -5, boxShadow: "0 10px 25px -5px rgba(0,0,0,0.1)" }}
                                     variants={item}
                                 >
-                                    <div className="text-amber-500 flex justify-center mb-2">
+                                    <div className="text-blue-500 flex justify-center mb-2">
                                         {stat.icon}
                                     </div>
                                     <h3 className="text-2xl font-bold text-gray-800">{stat.value}</h3>
@@ -184,7 +192,7 @@ const AboutUs = () => {
 
                         {/* Decorative element */}
                         <motion.div
-                            className="absolute -bottom-6 -right-6 w-32 h-32 bg-amber-400 rounded-lg rotate-12"
+                            className="absolute -bottom-6 -right-6 w-32 h-32 bg-blue-400 rounded-lg rotate-12"
                             initial={{ opacity: 0, x: 20 }}
                             whileInView={{ opacity: 0.3, x: 0 }}
                             transition={{ delay: 0.3 }}
@@ -204,7 +212,7 @@ const AboutUs = () => {
                         transition={{ duration: 0.6 }}
                         className="text-center mb-16"
                     >
-                        <h2 className="text-4xl font-bold mb-4">Meet Our <span className="text-amber-400">Dream Team</span></h2>
+                        <h2 className="text-4xl font-bold mb-4">Meet Our <span className="text-blue-400">Dream Team</span></h2>
                         <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                             The passionate individuals who make your stay unforgettable
                         </p>
@@ -238,7 +246,7 @@ const AboutUs = () => {
                                         }}
                                     >
                                         <h3 className="text-2xl font-bold">{member.name}</h3>
-                                        <p className="text-amber-300">{member.role}</p>
+                                        <p className="text-blue-300">{member.role}</p>
 
                                         <motion.div
                                             className="mt-4 pt-4 border-t border-white/20"
@@ -268,37 +276,20 @@ const AboutUs = () => {
                     variants={container}
                 >
                     <motion.div variants={item}>
-                        <h2 className="text-4xl font-bold mb-6 text-gray-800">
-                            Our <span className="text-amber-500">Prime</span> Location
-                        </h2>
+                        <div style={{ height: '100vh', width: '100%' }}>
+                            <GoogleMapReact
+                                bootstrapURLKeys={{ key: "" }}
+                                defaultCenter={defaultProps.center}
+                                defaultZoom={defaultProps.zoom}
+                            >
+                                <AnyReactComponent
+                                    lat={59.955413}
+                                    lng={30.337844}
+                                    text="My Marker"
+                                />
+                            </GoogleMapReact>
 
-                        <p className="text-lg text-gray-600 mb-6">
-                            Situated in the heart of the city, MT Hotel offers unparalleled access to cultural landmarks, business districts, and entertainment venues.
-                        </p>
-
-                        <div className="space-y-4">
-                            <div className="flex items-start gap-4">
-
-                                <div>
-                                    <h4 className="font-medium text-gray-800">Address</h4>
-                                    <p className="text-gray-600">{hotelInfo.location.address}</p>
-                                </div>
-                            </div>
-
-                            <div className="flex items-start gap-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-amber-500 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                                <div>
-                                    <h4 className="font-medium text-gray-800">Check-in/out</h4>
-                                    <p className="text-gray-600">3:00 PM / 11:00 AM</p>
-                                </div>
-                            </div>
                         </div>
-
-                        <button className="mt-8 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white font-medium rounded-full transition-all shadow-md hover:shadow-lg flex items-center gap-2">
-                            Get Directions
-                        </button>
                     </motion.div>
 
                     <motion.div
@@ -308,7 +299,7 @@ const AboutUs = () => {
                     >
                         {/* Replace with your actual map component or image */}
                         <img
-                            src="/hotel-map.jpg"
+                            src={mapPhoto}
                             alt="MT Hotel Location"
                             className="w-full h-full object-cover"
                         />
@@ -332,28 +323,7 @@ const AboutUs = () => {
                 </motion.div>
             </section>
 
-            {/* CTA Section */}
-            <section className="py-20 bg-amber-500 text-white">
-                <motion.div
-                    className="max-w-4xl mx-auto text-center px-6"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                >
-                    <h2 className="text-4xl font-bold mb-6">Ready for an Unforgettable Stay?</h2>
-                    <p className="text-xl mb-8 max-w-2xl mx-auto">
-                        Experience the MT Hotel difference - where every detail is crafted for your comfort.
-                    </p>
-                    <motion.button
-                        className="px-10 py-4 bg-white text-amber-600 font-bold rounded-full shadow-xl hover:shadow-2xl transition-all"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                    >
-                        Book Your Stay Now
-                    </motion.button>
-                </motion.div>
-            </section>
+
         </div>
     );
 };
