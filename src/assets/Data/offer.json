@@ -4,13 +4,17 @@
         "image": "https://i.postimg.cc/j5c9rVh7/temp-Image4-TW0-AX.avif",
         "title": "Deluxe Room",
         "description": "Spacious and luxurious room with a stunning view.",
-        "price": "$200/night"
+        "price": "$200/night",
+        "discount": "15%",
+        "originalPrice": "$230/night"
     },
     {
         "id": 2,
         "image": "https://i.postimg.cc/yNq2mydk/temp-Image8a-WIay.avif",
         "title": "Executive Suite",
         "description": "Elegant suite with modern amenities and a private balcony.",
-        "price": "$300/night"
+        "price": "$300/night",
+        "originalPrice": "$360/night",
+        "discount": "20%"
     }
 ]

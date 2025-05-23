@@ -86,41 +86,52 @@ const AboutUs = () => {
                 />
 
                 {/* Background image with parallax effect */}
-                <motion.div
-                    className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center"
-                    initial={{ scale: 1.2 }}
-                    animate={{ scale: 1 }}
-                    transition={{ duration: 1.5, ease: [0.43, 0.13, 0.23, 0.96] }}
-                />
+                <div>
+                    <div className=' relative h-screen flex items-center justify-center bg-blue-900 '>
+                        <motion.div className=' absolute inset-0 opacity-60 bg-cover '
+                            initial={{ scale: 1.2 }}
+                            animate={{ scale: 1 }}
+                            transition={{ duration: 1.5, ease: [0.43, 0.13, 0.23, 0.96] }}
+                            style={{
+                                backgroundImage: `url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`,
+                            }}>
 
-                <div className="relative z-20 h-full flex flex-col justify-center px-6 lg:px-16">
-                    <motion.div
-                        className="max-w-4xl"
-                        variants={container}
-                        initial="hidden"
-                        animate="visible"
-                    >
-                        <motion.h1
-                            className="text-5xl md:text-7xl font-bold text-white mb-6  leading-tight"
-                            variants={item}
-                        >
-                            Our <span className="">Story</span> of Hospitality
-                        </motion.h1>
-
-                        <motion.p
-                            className="text-xl text-white max-w-2xl mb-8"
-                            variants={item}
-                        >
-                            Discover the passion and dedication behind MT Hotel's legacy of exceptional service.
-                        </motion.p>
-
-                        <motion.div variants={item}>
-                            <Link to={'/rooms'} className="px-8 py-3 bg-blue-500 hover:bg-blue-600 cursor-pointer text-white font-medium rounded-full transition-all shadow-lg hover:shadow-xl">
-                                Explore Our Rooms
-                            </Link>
                         </motion.div>
-                    </motion.div>
+
+                        <div className=" z-20 h-full flex flex-col justify-center px-6 lg:px-16">
+                            <motion.div
+                                className="max-w-4xl"
+                                variants={container}
+
+                                animate="visible"
+                            >
+                                <motion.h1
+                                    className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
+                                    variants={item}
+                                >
+                                    Our <span className="">Story</span> of Hospitality
+                                </motion.h1>
+
+                                <motion.p
+                                    className="text-xl text-white max-w-2xl mb-8"
+                                    variants={item}
+                                >
+                                    Discover the passion and dedication behind MT Hotel's legacy of exceptional service.
+                                </motion.p>
+
+                                <motion.div variants={item}>
+                                    <Link to={'/rooms'} className=" px-8 py-3 bg-blue-500 hover:bg-blue-600 cursor-pointer text-white font-medium rounded-full transition-all shadow-lg hover:shadow-xl">
+                                        Explore Our Rooms
+                                    </Link>
+                                </motion.div>
+                            </motion.div>
+                        </div>
+
+
+                    </div>
+
                 </div>
+
 
                 {/* Scrolling indicator */}
                 <motion.div

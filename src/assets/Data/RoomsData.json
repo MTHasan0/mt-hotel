@@ -38,7 +38,7 @@
     },
     {
         "id": 4,
-        "image": "https://i.postimg.cc/j5c9rVh7/temp-Image4-TW0-AX.avif",
+        "image": "https://i.postimg.cc/h4YtfyM3/temp-Image8-Tkl-Nz.avif",
         "title": "Standard Room",
         "description": "Comfortable room with all essential amenities.",
         "price": "$150/night",
@@ -50,7 +50,7 @@
     },
     {
         "id": 5,
-        "image": "https://i.postimg.cc/j5c9rVh7/temp-Image4-TW0-AX.avif",
+        "image": "https://i.postimg.cc/cLp3w1m2/temp-Imagea84-I1q.avif",
         "title": "Ocean View Suite",
         "description": "Breathtaking ocean views with a private balcony.",
         "price": "$350/night",
@@ -62,7 +62,7 @@
     },
     {
         "id": 6,
-        "image": "https://i.postimg.cc/j5c9rVh7/temp-Image4-TW0-AX.avif",
+        "image": "https://i.postimg.cc/SNXjdFJh/temp-Image-Fcpn55.avif",
         "title": "Family Suite",
         "description": "Spacious and luxurious room with a stunning view.",
         "price": "$250/night",
@@ -74,7 +74,7 @@
     },
     {
         "id": 7,
-        "image": "https://i.postimg.cc/j5c9rVh7/temp-Image4-TW0-AX.avif",
+        "image": "https://i.postimg.cc/1XXXbbBD/temp-Image-J4-JOFE.avif",
         "title": "Penthouse",
         "description": "Spacious and luxurious room with a stunning view.",
         "price": "$600/night",
@@ -86,7 +86,7 @@
     },
     {
         "id": 8,
-        "image": "https://i.postimg.cc/j5c9rVh7/temp-Image4-TW0-AX.avif",
+        "image": "https://i.postimg.cc/Y0TrZ0hw/temp-Image-LPj-NXj.avif",
         "title": "Garden View Room",
         "description": "Spacious and luxurious room with a stunning view.",
         "price": "$180/night",
@@ -98,7 +98,7 @@
     },
     {
         "id": 9,
-        "image": "https://i.postimg.cc/j5c9rVh7/temp-Image4-TW0-AX.avif",
+        "image": "https://i.postimg.cc/05VJZ0np/temp-Imageo-IHoa-M.avif",
         "title": "Twin Room",
         "description": "Perfect for friends or colleagues traveling together.",
         "price": "$160/night",
@@ -110,7 +110,7 @@
     },
     {
         "id": 10,
-        "image": "https://i.postimg.cc/j5c9rVh7/temp-Image4-TW0-AX.avif",
+        "image": "https://i.postimg.cc/52CY4dV3/temp-Image-Oujxo-A.avif",
         "title": "Romantic Suite",
         "description": "Spacious and luxurious room with a stunning view.",
         "price": "$400/night",
@@ -122,7 +122,7 @@
     },
     {
         "id": 11,
-        "image": "https://i.postimg.cc/j5c9rVh7/temp-Image4-TW0-AX.avif",
+        "image": "https://i.postimg.cc/Jn643P80/temp-Image-Qh-UTUK.avif",
         "title": "Honeymoon Suite",
         "description": "Spacious and luxurious room with a stunning view.",
         "price": "$450/night",
@@ -134,7 +134,7 @@
     },
     {
         "id": 12,
-        "image": "https://i.postimg.cc/j5c9rVh7/temp-Image4-TW0-AX.avif",
+        "image": "https://i.postimg.cc/c4jtG1VC/temp-Imageusqh-Er.avif",
         "title": "Loft Suite",
         "description": "Spacious and luxurious room with a stunning view.",
         "price": "$320/night",
@@ -146,7 +146,7 @@
     },
     {
         "id": 13,
-        "image": "https://i.postimg.cc/j5c9rVh7/temp-Image4-TW0-AX.avif",
+        "image": "https://i.postimg.cc/L8L5dttQ/temp-Image-W9i-Btv.avif",
         "title": "Business Suite",
         "description": "Perfect for business travelers with a workspace.",
         "price": "$280/night",
@@ -158,7 +158,7 @@
     },
     {
         "id": 14,
-        "image": "https://i.postimg.cc/j5c9rVh7/temp-Image4-TW0-AX.avif",
+        "image": "https://i.postimg.cc/LsVs5m0z/temp-Image-Yrnefl.avif",
         "title": "Lake View Suite",
         "description": "Spacious and luxurious room with a stunning view.",
         "price": "$360/night",
@@ -178,66 +178,6 @@
             "Free Wi-Fi",
             "Butler Service",
             "Private Jacuzzi"
-        ]
-    },
-    {
-        "id": 16,
-        "image": "https://i.postimg.cc/j5c9rVh7/temp-Image4-TW0-AX.avif",
-        "title": "Cabana Room",
-        "description": "Relaxing beach side cabana with private access.",
-        "price": "$220/night",
-        "amenities": [
-            "Free Wi-Fi",
-            "Beach Access",
-            "Hammock"
-        ]
-    },
-    {
-        "id": 17,
-        "image": "https://i.postimg.cc/j5c9rVh7/temp-Image4-TW0-AX.avif",
-        "title": "Studio Apartment",
-        "description": "Spacious and luxurious room with a stunning view.",
-        "price": "$190/night",
-        "amenities": [
-            "Free Wi-Fi",
-            "Kitchenette",
-            "Air Conditioning"
-        ]
-    },
-    {
-        "id": 18,
-        "image": "https://i.postimg.cc/j5c9rVh7/temp-Image4-TW0-AX.avif",
-        "title": "Heritage Suite",
-        "description": "Stay in a beautifully restored heritage suite.",
-        "price": "$380/night",
-        "amenities": [
-            "Free Wi-Fi",
-            "Vintage Decor",
-            "Breakfast Included"
-        ]
-    },
-    {
-        "id": 19,
-        "image": "https://i.postimg.cc/j5c9rVh7/temp-Image4-TW0-AX.avif",
-        "title": "Bungalow",
-        "description": "Spacious and luxurious room with a stunning view.",
-        "price": "$450/night",
-        "amenities": [
-            "Free Wi-Fi",
-            "Private Garden",
-            "Outdoor Shower"
-        ]
-    },
-    {
-        "id": 20,
-        "image": "https://i.postimg.cc/j5c9rVh7/temp-Image4-TW0-AX.avif",
-        "title": "Mountain Lodge",
-        "description": "Cozy retreat in the mountains with breathtaking views.",
-        "price": "$280/night",
-        "amenities": [
-            "Free Wi-Fi",
-            "Fireplace",
-            "Scenic Views"
         ]
     }
 ]

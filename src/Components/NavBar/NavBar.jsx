@@ -64,7 +64,7 @@ const Navbar = () => {
                             <Link to={'/rooms'} className="text-gray-800 p-3 hover:bg-blue-500/10 rounded-lg hover:text-blue-500">
                                 Rooms
                             </Link>
-                            
+
                             <Link to={'/about'} className="text-gray-800 p-3 hover:bg-blue-500/10 rounded-lg hover:text-blue-500">
                                 About Us
                             </Link>
@@ -83,8 +83,8 @@ const Navbar = () => {
                             <Link to={"/rooms"} className="block py-2 text-gray-800 hover:text-blue-500">
                                 Rooms
                             </Link>
-                            <Link to={'/rooms'} className="block py-2 text-gray-800 hover:text-blue-500">
-                                Booking
+                            <Link to={'/about'} className="block py-2 text-gray-800 hover:text-blue-500">
+                                About Us
                             </Link>
 
                             <Link to={"/contact"} className="block py-2 text-gray-800 hover:text-blue-500">

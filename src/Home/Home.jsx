@@ -7,6 +7,7 @@ import guest from '../assets/Featured/image.png';
 import { FaStar, FaSwimmingPool, FaSpa, FaUtensils, FaWifi, FaParking } from "react-icons/fa";
 import { IoIosArrowForward } from "react-icons/io";
 
+
 const Home = () => {
     const amenities = [
         { icon: <FaSwimmingPool size={30} />, title: "Infinity Pool" },
@@ -23,15 +24,20 @@ const Home = () => {
         { number: "24/7", label: "Concierge Service" }
     ];
 
+
+
     return (
         <div className="bg-gray-100">
             {/* Hero Section with Parallax Effect */}
-            <div className="relative h-screen flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 bg-cover bg-center bg-fixed"
+            <div className="relative h-screen flex items-center justify-center bg-blue-900 overflow-hidden">
+                <motion.div className="absolute inset-0 bg-cover bg-center bg-fixed opacity-60"
+                    initial={{ scale: 1.2 }}
+                    animate={{ scale: 1 }}
+                    transition={{ duration: 1.5, ease: [0.43, 0.13, 0.23, 0.96] }}
                     style={{
                         backgroundImage: `url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`,
                     }}>
-                </div>
+                </motion.div>
                 <div className="absolute inset-0 bg-black opacity-50"></div>
 
                 <motion.div
@@ -45,8 +51,8 @@ const Home = () => {
                         <motion.span
                             initial={{ opacity: 0, y: -80 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 1, delay: 0.2 }}
-                            className="text-4xl md:text-5xl font-bold px-3 py-2 bg-opacity-70 bg-slate-500 ml-0 md:ml-2 mt-2 md:mt-0"
+                            transition={{ duration: 1 }}
+                            className="text-4xl md:text-5xl font-bold px-3 py-2 bg-opacity-70 text-blue-500 ml-0 md:ml-2 mt-2 md:mt-0"
                         >
                             Hasan
                         </motion.span>
@@ -110,7 +116,7 @@ const Home = () => {
                                 alt="Luxury Suite"
                                 className="rounded-lg shadow-xl w-full h-auto"
                             />
-                            <div className="absolute -bottom-6 -right-6 bg-gray-100 p-4 rounded-lg shadow-lg w-3/4">
+                            <div className="absolute -bottom-6 -right-6 bg-blue-100 p-4 rounded-lg shadow-lg w-3/4">
                                 <h3 className="text-xl  font-bold mb-2">Signature Suites</h3>
                                 <p className="text-gray-600">Our most exclusive accommodations with panoramic city views.</p>
                             </div>
@@ -148,7 +154,7 @@ const Home = () => {
                                 whileTap={{ scale: 0.97 }}
                                 className="mt-8 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                             >
-                                <Link to="/amenities">Explore All Amenities</Link>
+                                <Link to={'/amenities'}>Explore All Amenities</Link>
                             </motion.button>
                         </motion.div>
                     </div>
@@ -298,16 +304,16 @@ const Home = () => {
                                     </div>
                                     <div className="p-6">
                                         <div className="flex justify-between items-start mb-2">
-                                            <h3 className="text-xl font-bold">{offer.title}</h3>
-                                            <div className="bg-white text-blue-700 px-2 py-1 rounded text-sm font-bold">
+                                            <h3 className="text-xl text-black font-bold">{offer.title}</h3>
+                                            <div className="bg-red-200 text-blue-700 px-2 py-1 rounded text-sm font-bold">
                                                 Save {offer.discount}
                                             </div>
                                         </div>
-                                        <p className="text-white text-opacity-80 mb-4">{offer.description}</p>
+                                        <p className="text-black text-opacity-80 mb-4">{offer.description}</p>
                                         <div className="flex justify-between items-center">
                                             <div>
-                                                <p className="text-2xl font-bold">{offer.price}</p>
-                                                <p className="text-sm line-through opacity-70">{offer.originalPrice}</p>
+                                                <p className="text-2xl text-black font-bold">{offer.price}</p>
+                                                <p className="text-sm text-black to-black line-through opacity-70">{offer.originalPrice}</p>
                                             </div>
                                             <button className="bg-white text-blue-700 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                                                 Book Offer
