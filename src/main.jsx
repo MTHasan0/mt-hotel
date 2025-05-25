@@ -15,6 +15,8 @@ import Rooms from './Pages/Room/Rooms.jsx';
 import Contact from './Pages/Contact/Contact.jsx';
 import AboutUs from './Pages/AboutUs/AboutUs.jsx';
 import Amenities from "./Pages/Amenities/Amenities.jsx";
+import Spa from "./Pages/Spa/Spa.jsx";
+import PrivatePool from "./Pages/PrivatePool/PrivatePool.jsx";
 
 const router = createBrowserRouter([
   {
@@ -49,6 +51,14 @@ const router = createBrowserRouter([
         path: "/amenities",
         element: <Amenities></Amenities>
       },
+      {
+        path: "/spa",
+        element: <Spa></Spa>
+      },
+      {
+        path: "/pool",
+        element: <PrivatePool></PrivatePool>
+      }
     ]
   },
 ]);

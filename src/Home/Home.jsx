@@ -32,13 +32,13 @@ const Home = () => {
     return (
         <div className="bg-gray-100">
             {/* Hero Section with Parallax Effect */}
-            <div className="relative h-screen flex items-center justify-center bg-blue-800 overflow-hidden">
-                <motion.div className="absolute inset-0 bg-cover bg-center bg-fixed opacity-50"
+            <div className="relative h-screen flex items-center justify-center bg-blue-500 overflow-hidden">
+                <motion.div className="absolute inset-0 bg-cover bg-center bg-fixed opacity-70"
                     initial={{ scale: 1 }}
-                    animate={{ scale: 1.2 }}
+                    animate={{ scale: 1.1 }}
                     transition={{ duration: 1.5, ease: [0.43, 0.13, 0.23, 0.96] }}
                     style={{
-                        backgroundImage: `url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`,
+                        backgroundImage: `url('https://i.postimg.cc/TwRPH0b1/temp-Image-LDEa-OL.avif')`,
                     }}>
                 </motion.div>
                 <div className="absolute inset-0 bg-black opacity-30"></div>
@@ -64,20 +64,26 @@ const Home = () => {
                         Where luxury meets comfort in the heart of the city. Experience unparalleled hospitality.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <motion.button
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-semibold transition-colors"
-                        >
-                            <Link to='/rooms'>Book Now</Link>
-                        </motion.button>
-                        <motion.button
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors"
-                        >
-                            <Link to={'/about'}>Explore More</Link>
-                        </motion.button>
+                        <Link className=" cursor-pointer" to='/rooms'>
+                            <motion.button
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                onClick={scrollToTop}
+                                className="bg-blue-600 hover:bg-blue-700 text-white cursor-pointer px-6 py-3 rounded-lg text-lg font-semibold transition-colors"
+                            >
+                                Book Now
+                            </motion.button>
+                        </Link>
+                        <Link className=" cursor-pointer" to={'/about'}>
+                            <motion.button
+                                onClick={scrollToTop}
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                className="bg-transparent border-2 cursor-pointer border-white text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors"
+                            >
+                                Explore More
+                            </motion.button>
+                        </Link>
                     </div>
                 </motion.div>
 
@@ -156,9 +162,10 @@ const Home = () => {
                             <motion.button
                                 onClick={scrollToTop}
                                 whileHover={{ scale: 1.03 }}
-                                className="mt-8 bg-blue-600 text-white cursor-pointer  py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+
+                                className="mt-8 bg-blue-600 text-white cursor-pointer h-10 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                             >
-                                <Link to={'/amenities'}> Explore All Amenities</Link>
+                                <Link to={'/amenities'} className=" px-5 py-5"> Explore All Amenities</Link>
 
                             </motion.button>
                             {/* </a> */}
@@ -187,7 +194,8 @@ const Home = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {featuredRooms.map((room) => (
-                            <Link to={`/room/${room.id}`} key={room.id}>
+                            <Link onClick={scrollToTop}
+                                to={`/room/${room.id}`} key={room.id}>
                                 <motion.div
                                     initial={{ opacity: 0, y: 50 }}
                                     whileInView={{ opacity: 1, y: 0 }}
@@ -229,6 +237,7 @@ const Home = () => {
 
                     <div className="text-center mt-12">
                         <motion.button
+                            onClick={scrollToTop}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             className="bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors"

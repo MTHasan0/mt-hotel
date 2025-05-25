@@ -65,20 +65,23 @@ const Rooms = () => {
                 </div>
 
                 {/* Room Selector - Desktop */}
+                {/* Room Selector - Desktop */}
                 <div className="hidden lg:flex lg:w-1/5 bg-gray-100 p-6 flex-col">
                     <h2 className="text-2xl font-bold mb-6">Room Selection</h2>
-                    {rooms.map((room, index) => (
-                        <motion.button
-                            key={room.id}
-                            onClick={() => setSelectedRoom(index)}
-                            whileHover={{ x: 5 }}
-                            className={`text-left p-4 mb-3 rounded-lg ${selectedRoom === index ? 'bg-white shadow-md border-l-4 border-blue-600' : 'hover:bg-gray-200'}`}
-                        >
-                            <h3 className="font-semibold">{room.title}</h3>
-                            <div className=''><img src={room.image} alt="" /></div>
-                            <p className="text-sm text-gray-600">{room.price}</p>
-                        </motion.button>
-                    ))}
+                    <div className="overflow-y-auto" style={{ maxHeight: 'calc(100vh - 150px)' }}> {/* Added scroll container */}
+                        {rooms.map((room, index) => (
+                            <motion.button
+                                key={room.id}
+                                onClick={() => { setSelectedRoom(index) }}
+                                whileHover={{ x: 5 }}
+                                className={`text-left p-4 mb-3 rounded-lg ${selectedRoom === index ? 'bg-white shadow-md border-l-4 border-blue-600' : 'hover:bg-gray-200'}`}
+                            >
+                                <h3 className="font-semibold">{room.title}</h3>
+                                <div className=''><img src={room.image} alt="" /></div>
+                                <p className="text-sm text-gray-600">{room.price}</p>
+                            </motion.button>
+                        ))}
+                    </div>
                 </div>
 
                 {/* Room Content */}

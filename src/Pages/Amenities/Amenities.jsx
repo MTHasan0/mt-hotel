@@ -5,8 +5,12 @@ import { GiPartyPopper, GiCommercialAirplane } from "react-icons/gi";
 import { IoIosFitness, IoMdRestaurant } from "react-icons/io";
 import { MdMeetingRoom, MdRoomService, MdLocalLaundryService } from "react-icons/md";
 import PremiumFeatures from '../../assets/Data/premiumFeatures.json'
+import { Link } from "react-router-dom";
 
 const Amenities = () => {
+    const scrollToTop = () => {
+        window.scrollTo(0, 0);
+    };
     const categories = [
         {
             title: "Wellness & Recreation",
@@ -161,9 +165,13 @@ const Amenities = () => {
                             <div className="absolute bottom-0 left-0 p-6 text-white">
                                 <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
                                 <p className="mb-4">{feature.description}</p>
-                                <button className="text-white border border-white px-4 py-2 rounded-lg hover:bg-white hover:text-blue-600 transition-colors">
+                                <Link
+                                    onClick={scrollToTop}
+                                    to={`/${feature.page}`} // or use feature.slug if you have that
+                                    className="text-white border border-white px-4 py-2 rounded-lg hover:bg-white hover:text-blue-600 transition-colors inline-block"
+                                >
                                     Learn More
-                                </button>
+                                </Link>
                             </div>
                         </motion.div>
                     ))}
@@ -218,20 +226,23 @@ const Amenities = () => {
                         Book your stay now and enjoy access to all our premium amenities and services.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <motion.button
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors"
-                        >
-                            Book Your Stay
-                        </motion.button>
-                        <motion.button
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="bg-white border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-50 transition-colors"
-                        >
-                            Contact Concierge
-                        </motion.button>
+                        <Link className=" cursor-pointer" to={'/rooms'}>
+                            <motion.button
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                className="bg-blue-600 cursor-pointer text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors"
+                            >
+                                Book Your Stay
+                            </motion.button></Link>
+                        <Link>
+                            <motion.button
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                className="bg-white border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-50 transition-colors"
+                            >
+                                Contact Concierge
+                            </motion.button>
+                        </Link>
                     </div>
                 </div>
             </div>

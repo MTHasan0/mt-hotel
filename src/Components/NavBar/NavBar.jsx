@@ -21,9 +21,9 @@ const Navbar = () => {
                 <div className="max-w-6xl mx-auto px-4">
                     <div className="flex justify-between items-center py-4">
                         {/* Logo */}
-                        <div className="text-2xl font-bold text-gray-800">
-                            Hotel Hasan
-                        </div>
+                        <Link to={"/"} className="text-2xl font-bold text-gray-800">
+                            <img className=" w-16 cursor-pointer" src={"https://i.postimg.cc/tCxbQg6W/temp-Imagekd-VMgz.avif"} alt="" />
+                        </Link>
 
                         {/* Mobile Menu Button */}
                         <div className="md:hidden">
