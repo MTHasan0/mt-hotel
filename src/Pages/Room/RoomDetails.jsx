@@ -8,16 +8,18 @@ import { icons } from 'lucide-react';
 
 
 const RoomDetails = () => {
-    const icon = {
-        icons: [
+    const icon =
+        [
 
             {
                 wifi: <FaWifi className="text-blue-500" />,
                 bottle: <FaWineBottle className="text-blue-500" />
             }
+
+
         ]
 
-    }
+
     const { id } = useParams();
 
     const room = rooms.find((room) => room.id === parseInt(id));
@@ -55,7 +57,7 @@ const RoomDetails = () => {
                                     <ul key={index} className="text-gray-600 text-center m-2 ">
                                         <div className=' bg-blue-200 w-36 h-16 flex mx-auto items-center list-none justify-center rounded-lg hover:shadow-lg hover:bg-blue-300 hover:transition-all hover:-translate-y-2 duration-600'>
                                             {amenity}
-                                            {icon}
+
                                         </div>
                                     </ul>
                                 ))}

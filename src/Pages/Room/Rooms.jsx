@@ -65,7 +65,7 @@ const Rooms = () => {
                 </div>
 
                 {/* Room Selector - Desktop */}
-                <div className="hidden lg:flex lg:w-1/4 bg-gray-100 p-6 flex-col">
+                <div className="hidden lg:flex lg:w-1/5 bg-gray-100 p-6 flex-col">
                     <h2 className="text-2xl font-bold mb-6">Room Selection</h2>
                     {rooms.map((room, index) => (
                         <motion.button
@@ -75,6 +75,7 @@ const Rooms = () => {
                             className={`text-left p-4 mb-3 rounded-lg ${selectedRoom === index ? 'bg-white shadow-md border-l-4 border-blue-600' : 'hover:bg-gray-200'}`}
                         >
                             <h3 className="font-semibold">{room.title}</h3>
+                            <div className=''><img src={room.image} alt="" /></div>
                             <p className="text-sm text-gray-600">{room.price}</p>
                         </motion.button>
                     ))}
@@ -298,7 +299,7 @@ const Rooms = () => {
             </div>
 
             {/* Other Rooms */}
-            <div className="py-12 px-4 max-w-7xl mx-auto">
+            {/* <div className="py-12 px-4 max-w-7xl mx-auto">
                 <h2 className="text-2xl font-bold mb-8 text-center">Explore Other Accommodations</h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -331,7 +332,7 @@ const Rooms = () => {
                         </motion.div>
                     ))}
                 </div>
-            </div>
+            </div> */}
 
             {/* Mobile Booking CTA */}
             <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white shadow-lg p-4 border-t border-gray-200">

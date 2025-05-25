@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, Links } from "react-router-dom";
 import featuredRooms from '../assets/Data/featuredRooms.json';
 import offer from '../assets/Data/offer.json';
 import guest from '../assets/Featured/image.png';
@@ -9,6 +9,9 @@ import { IoIosArrowForward } from "react-icons/io";
 
 
 const Home = () => {
+    const scrollToTop = () => {
+        window.scrollTo(0, 0);
+    };
     const amenities = [
         { icon: <FaSwimmingPool size={30} />, title: "Infinity Pool" },
         { icon: <FaSpa size={30} />, title: "Luxury Spa" },
@@ -29,16 +32,16 @@ const Home = () => {
     return (
         <div className="bg-gray-100">
             {/* Hero Section with Parallax Effect */}
-            <div className="relative h-screen flex items-center justify-center bg-blue-900 overflow-hidden">
-                <motion.div className="absolute inset-0 bg-cover bg-center bg-fixed opacity-60"
-                    initial={{ scale: 1.2 }}
-                    animate={{ scale: 1 }}
+            <div className="relative h-screen flex items-center justify-center bg-blue-800 overflow-hidden">
+                <motion.div className="absolute inset-0 bg-cover bg-center bg-fixed opacity-50"
+                    initial={{ scale: 1 }}
+                    animate={{ scale: 1.2 }}
                     transition={{ duration: 1.5, ease: [0.43, 0.13, 0.23, 0.96] }}
                     style={{
                         backgroundImage: `url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`,
                     }}>
                 </motion.div>
-                <div className="absolute inset-0 bg-black opacity-50"></div>
+                <div className="absolute inset-0 bg-black opacity-30"></div>
 
                 <motion.div
                     initial={{ opacity: 0, y: 60 }}
@@ -66,7 +69,7 @@ const Home = () => {
                             whileTap={{ scale: 0.95 }}
                             className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-semibold transition-colors"
                         >
-                            <Link to={'/rooms'}>Book Now</Link>
+                            <Link to='/rooms'>Book Now</Link>
                         </motion.button>
                         <motion.button
                             whileHover={{ scale: 1.05 }}
@@ -149,13 +152,18 @@ const Home = () => {
                                 ))}
                             </div>
 
+                            {/* <a href="/amenities" className=" border "> */}
                             <motion.button
+                                onClick={scrollToTop}
                                 whileHover={{ scale: 1.03 }}
-                                whileTap={{ scale: 0.97 }}
-                                className="mt-8 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                                className="mt-8 bg-blue-600 text-white cursor-pointer  py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                             >
-                                <Link to={'/amenities'}>Explore All Amenities</Link>
+                                <Link to={'/amenities'}> Explore All Amenities</Link>
+
                             </motion.button>
+                            {/* </a> */}
+
+
                         </motion.div>
                     </div>
                 </div>
