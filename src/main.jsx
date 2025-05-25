@@ -36,7 +36,7 @@ const router = createBrowserRouter([
         element: <BookNow></BookNow>
       },
       {
-        path: "/rooms",
+        path: "/rooms/:id",
         element: <Rooms></Rooms>
       },
       {

@@ -120,7 +120,7 @@ const AboutUs = () => {
                                 </motion.p>
 
                                 <motion.div variants={item}>
-                                    <Link to={'/rooms'} className=" px-8 py-3 bg-blue-500 hover:bg-blue-600 cursor-pointer text-white font-medium rounded-full transition-all shadow-lg hover:shadow-xl">
+                                    <Link to={'/rooms/:id'} className=" px-8 py-3 bg-blue-500 hover:bg-blue-600 cursor-pointer text-white font-medium rounded-full transition-all shadow-lg hover:shadow-xl">
                                         Explore Our Rooms
                                     </Link>
                                 </motion.div>

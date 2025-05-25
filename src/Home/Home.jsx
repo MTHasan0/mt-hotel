@@ -64,7 +64,7 @@ const Home = () => {
                         Where luxury meets comfort in the heart of the city. Experience unparalleled hospitality.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link className=" cursor-pointer" to='/rooms'>
+                        <Link className=" cursor-pointer" to='/rooms/:id'>
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
@@ -195,7 +195,7 @@ const Home = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {featuredRooms.map((room) => (
                             <Link onClick={scrollToTop}
-                                to={`/room/${room.id}`} key={room.id}>
+                                to={`/rooms/${room.id}`} key={room.id}>
                                 <motion.div
                                     initial={{ opacity: 0, y: 50 }}
                                     whileInView={{ opacity: 1, y: 0 }}
